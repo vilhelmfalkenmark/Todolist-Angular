@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Angular - Todo</title>
+  <!--build:css css/styles.min.css-->
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <!--endbuild-->
+</head>
+
+<body ng-app="todoList">
+  <div class="container" ng-controller="todoController as todoCtrl">
+
+    <form name="addForm" ng-submit="addItem()">
+      <p>Sak:
+        <input type="text" ng-model="item.name" placeholder="Namn på sak" required>
+      </p>
+      <input type="submit" value="Lägg till!" />
+    </form>
+
+    <div class="row">
+      <!-- INTE FÄRDIGA SAKER -->
+      <div class="col-6-desk">
+        <h2>INTE FÄRDIGA SAKER</h2>
+        <div class="item" ng-repeat="item in todoCtrl.items" ng-hide="item.active">
+          <div ng-hide="item.edit"> Namn: {{item.itemName}} </div>
+          <div ng-show="item.edit"> Namn: {{new.name}} </div>
+
+          <div> Status: {{item.active? "Klar":"Inte klar"}} </div>
+          <div> Redigera: {{item.edit? "Vill redigera":"Vill inte redigera"}} </div>
+          <!-- <div>{{new.name}}</div> -->
+          <button ng-click="itemReady()">Markera som färdig!</button>
+          <button ng-click="editItem()" ng-hide="item.edit">Redigera</button>
+          <!-- REDIGERINGSCONTAINER -->
+          <div class="edit-container" ng-show="item.edit">
+            <form ng-submit="editItemName(new.name)">
+              <input type="text" placeholder="{{item.itemName}}" ng-model="new.name" required>
+              <input type="submit" value="Ändra namn!" />
+            </form>
+          </div>
+          <!-- REDIGERINGSCONTAINER -->
+        </div>
+      </div>
+
+      <!-- FÄRDIGA SAKER -->
+      <div class="col-6-desk">
+        <h2>FÄRDIGA SAKER</h2>
+        <div class="item" ng-repeat="item in todoCtrl.items" ng-show="item.active">
+          <div> Namn: {{item.itemName}} </div>
+          <div> Status: {{item.active? "Klar":"Inte klar"}} </div>
+          <button ng-click="itemDelete(item)">Radera</button>
+          <button ng-click="itemNotReady(item)">Ej Färdig</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--build:js js/main.min.js -->
+  <!-- <script src="js/jquery-2.1.4.min.js"></script> -->
+  <script src="js/angular.min.js"></script>
+  <script src="js/script.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>
