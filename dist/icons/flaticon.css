@@ -1,0 +1,81 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("flaticon.eot");
+	src: url("flaticon.eot#iefix") format("embedded-opentype"),
+	url("flaticon.woff") format("woff"),
+	url("flaticon.ttf") format("truetype"),
+	url("flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+	font-family: Flaticon;
+font-style: normal;
+/*margin-left: 20px;*/
+}.flaticon-add182:before {
+	content: "\e000";
+}
+.flaticon-arrow39:before {
+	content: "\e001";
+}
+.flaticon-cancel30:before {
+	content: "\e002";
+}
+.flaticon-check59:before {
+	content: "\e003";
+}
+.flaticon-circle108:before {
+	content: "\e004";
+}
+.flaticon-clock118:before {
+	content: "\e005";
+}
+.flaticon-clock289:before {
+	content: "\e006";
+}
+.flaticon-cross108:before {
+	content: "\e007";
+}
+.flaticon-cross97:before {
+	content: "\e008";
+}
+.flaticon-delete96:before {
+	content: "\e009";
+}
+.flaticon-edit26:before {
+	content: "\e00a";
+}
+.flaticon-edit45:before {
+	content: "\e00b";
+}
+.flaticon-facebook2:before {
+	content: "\e00c";
+}
+.flaticon-garbage4:before {
+	content: "\e00d";
+}
+.flaticon-github10:before {
+	content: "\e00e";
+}
+.flaticon-homework:before {
+	content: "\e00f";
+}
+.flaticon-hourglass9:before {
+	content: "\e010";
+}
+.flaticon-listing1:before {
+	content: "\e011";
+}
+.flaticon-pen:before {
+	content: "\e012";
+}
+.flaticon-script:before {
+	content: "\e013";
+}
+.flaticon-trash42:before {
+	content: "\e014";
+}
+.flaticon-year1:before {
+	content: "\e015";
+}

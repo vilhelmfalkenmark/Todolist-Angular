@@ -1,31 +1,160 @@
 body
 {
-  color: $darkGrey;
-  font-family: Helvetica Neue, Helvetica, Arial;
+//  color: white;
+  font-family: 'Open Sans', sans-serif;
+ background-color: $bodyBackground; //
+
+}
+header
+{
+//  background-color: $green;
+}
+*
+{
+  outline: none;
+  outline: 0;
 }
 .container
 {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+}
+h1
+{
+//  margin: 0;
+  text-align: center;
 }
 h2
 {
   padding: 30px 0;
 }
-.row, .gtr-row
-{
-  //color: white;
-  font-size: 13px;
-}
-article
-{
-  margin: 0 auto;
-  max-width: 680px;
-}
-
 
 /* SHAME */
-.item
+
+$rowHeight:  90px;
+
+
+/*=========== INPUT & FORMS =============*/
+.list-container
 {
-  height: 150px;
+  color: $darkGrey;
+
+  h2, h3
+  {
+  //  color: white;
+  }
+}
+.form-input, .form-button
+{
+  width: 100%;
+  margin: 5px 0;
+  height: 40px;
+  background: transparent;
+  border: 1px solid $darkGrey;
+}
+.inner-container
+{
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 1000px;
+}
+.list-container
+{ //
+  width: 90%;
+  max-width: 1000px;
+  min-width: 320px;
+  margin: 20px auto;
+}
+
+.item-name-container
+{
+  z-index: 1;
+  font-size: 18px;
+  position: absolute;
+  top: 30px;
+  left: 10px;
+}
+.item-container
+{
+  position: relative;
+  height: $rowHeight;
+  background-color: $rowColor;
+
+}
+.row
+{
+}
+
+
+.todo-items
+{
+  border-top: 15px solid $notDoneColor;
+//  border-bottom: 5px solid $notDoneColor;
+//  margin: 14px 0;
+&:last-of-type
+{
+//  border-bottom: 1px solid blue;
+}
+
+}
+
+
+.done-items
+{
+  border-top: 15px solid $doneColor;
+
+}
+.right-section
+{
+  position: absolute;
+  right: 0px;
+  top: 0;
+  height: $rowHeight;
+  width: $rowHeight+40px;
+//  border-left: 1px solid grey;0
+//  border-right: 1px solid grey;
+}
+.edit-container
+{
+  position: absolute;
+  width: 300px;
+  left: 40px;
+  top: 18px;
+  z-index: 9999;
+}
+h2
+{
+  text-align: center;
+}
+.time-stamps
+{
+  text-align: center;
+  font-size: 10px;
+  position: absolute; //
+  bottom: 1px;
+  width: 80%;
+  left: 0; //
+  right: 15%;
+  margin: 0 auto;
+}
+
+
+/*  ICONS  */
+.icon
+{
+  transition: all 0.3s ease;
+  cursor: pointer;
+  //display: block;
+  &:hover
+  {
+    // transform: rotate(360deg);
+    //transform: scale(1.2);
+    //font-size: 25px;
+    color: $green;
+  }
+
+}
+.icon-delete
+{
+  color: $darkGrey;
 }
